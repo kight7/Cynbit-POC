@@ -1,1 +1,0 @@
-# CYNBIT Proof of Concept
