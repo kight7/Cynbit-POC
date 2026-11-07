@@ -1,0 +1,71 @@
+# Workflow routing rules. These are evaluated top to bottom, and the first matching rule wins.
+# The rep names are PLACEHOLDERS for the demo; replace them with real Cynbit owners.
+#
+# Supported conditions (all listed conditions must hold):
+#   off_scope: true/false        min_score / max_score: int
+#   industries: [..]             need_types: [..]          regions: [..]
+#   tiers: [hot, warm, cold]
+
+rules:
+  - name: "Off-scope -> polite decline / referral"
+    when: { off_scope: true }
+    route:
+      team: "Inbound Desk"
+      owner: "inbound@cynbit (placeholder)"
+      sla: "Reply within 2 business days with a polite decline or referral"
+
+  - name: "Cold lead -> nurture"
+    when: { tiers: [cold] }
+    route:
+      team: "Marketing Nurture"
+      owner: "Nurture queue (placeholder)"
+      sla: "Ask clarifying questions; add to nurture sequence"
+
+  - name: "Healthcare (compliance-heavy)"
+    when: { industries: [healthcare] }
+    route:
+      team: "Healthcare & Life Sciences Pod"
+      owner: "Rep A - Healthcare (placeholder)"
+      sla: "Hot: 4h / Warm: 1 business day"
+
+  - name: "Fintech / payments"
+    when: { industries: [fintech] }
+    route:
+      team: "Fintech & Payments Pod"
+      owner: "Rep B - Fintech (placeholder)"
+      sla: "Hot: 4h / Warm: 1 business day"
+
+  - name: "AI/ML-led engagements"
+    when: { need_types: [ai_ml, data_analytics] }
+    route:
+      team: "AI & Data Pod"
+      owner: "Rep C - AI Solutions (placeholder)"
+      sla: "Hot: 4h / Warm: 1 business day"
+
+  - name: "Commerce, fashion and retail"
+    when: { industries: [ecommerce_retail, fashion] }
+    route:
+      team: "Commerce & Retail Pod"
+      owner: "Rep D - Commerce (placeholder)"
+      sla: "Hot: 4h / Warm: 1 business day"
+
+  - name: "Growth / SEO / marketing"
+    when: { need_types: [seo_growth] }
+    route:
+      team: "Growth & SEO Pod"
+      owner: "Rep E - Growth (placeholder)"
+      sla: "Hot: 4h / Warm: 1 business day"
+
+  - name: "International enterprise"
+    when: { regions: [north_america, europe, middle_east, apac], tiers: [hot] }
+    route:
+      team: "International Accounts"
+      owner: "Rep F - International (placeholder)"
+      sla: "Hot: 4h (overlap with client time zone)"
+
+  - name: "Default"
+    when: {}
+    route:
+      team: "Platforms & Engineering Pod"
+      owner: "Rep G - Solutions (placeholder)"
+      sla: "Warm: 1 business day"

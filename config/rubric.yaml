@@ -1,0 +1,53 @@
+# Lead-scoring rubric. The weights are editable by Sales Ops without code changes.
+# Total possible = 100. Each factor awards points according to the rules below.
+
+tiers:
+  hot: 70      # score >= 70  -> respond within 4 business hours
+  warm: 40     # 40 <= score < 70 -> respond within 1 business day
+               # score < 40 -> cold / nurture
+
+factors:
+  service_fit:
+    label: "Clear need matching a Cynbit service"
+    max: 25
+    rules:
+      clear_match: 25        # at least one need type maps to a Cynbit service line
+      vague_match: 12        # need is stated only loosely ("something digital", "help with tech")
+      no_match: 0            # off-scope request
+
+  budget:
+    label: "Budget signal stated"
+    max: 20
+    rules:
+      explicit_amount: 20    # a number or range is given
+      soft_signal: 10        # "funded", "budget approved", "flexible budget"
+      none: 0
+
+  timeline:
+    label: "Timeline urgency (< 3 months)"
+    max: 20
+    rules:
+      within_3_months: 20    # <= 3 months, or urgency explicitly high (ASAP, launch date soon)
+      within_6_months: 10
+      longer: 5
+      unknown: 0
+
+  authority_size:
+    label: "Company size / decision-maker present"
+    max: 15
+    rules:
+      decision_maker: 8      # CEO, CTO, founder, VP, head of, director, owner
+      size:
+        enterprise: 7
+        mid_market: 7
+        smb: 5
+        startup: 4
+        unknown: 0
+
+  industry_match:
+    label: "Industry match to a Cynbit case study"
+    max: 20
+    rules:
+      exact: 20              # top retrieved case study shares the inquiry's industry
+      related: 10            # some top-3 case shares the industry, or retrieval confidence is high
+      none: 0

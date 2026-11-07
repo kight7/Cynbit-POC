@@ -1,0 +1,42 @@
+# Controlled vocabularies shared by the extractor, scorer, router and retriever.
+# The keywords drive the offline (no-LLM) extractor and the LLM prompt's allowed values.
+
+industries:
+  healthcare: [hospital, clinic, patient, healthcare, health, medical, clinician, doctor, telemedicine, ehr, emr, diagnostic, pharma, care home, nursing, hipaa]
+  fintech: [fintech, payment, payments, bank, banking, wallet, remittance, lending, loan, ledger, upi, kyc, insurance, insurtech, transaction, card]
+  ecommerce_retail: [ecommerce, e-commerce, online store, retail, shop, store, stores, shopify, marketplace, checkout, d2c, grocery, supermarket, catalog]
+  fashion: [fashion, apparel, clothing, garment, boutique, wardrobe, eyewear, jewellery, jewelry, footwear, try-on]
+  marketing_adtech: [marketing agency, campaign, campaigns, ad spend, adtech, advertising, roas, attribution, media buying, performance marketing]
+  edtech: [edtech, learning, students, student, course, courses, lms, exam, tutoring, school, university, training platform, coaching]
+  entertainment_events: [ticket, ticketing, concert, event, events, festival, venue, entertainment, booking, live show]
+  enterprise_software: [erp, legacy, internal tool, back-office, manufacturing, sap, inventory system, employees use, enterprise software]
+  saas_collaboration: [saas, collaboration, collaborative, real-time editing, writers, document editor, workspace, multiplayer, co-editing]
+  food_supply_chain: [food, farm, farmers, organic, supply chain, traceability, provenance, restaurant, sourcing, produce]
+  logistics: [logistics, fleet, shipment, delivery, warehouse, courier, freight]
+  real_estate: [real estate, property, tenant, landlord, proptech]
+
+need_types:
+  ai_ml: [ai, artificial intelligence, machine learning, ml, model, prediction, predictive, classify, classification, chatbot, llm, recommendation, personalization, personalisation, computer vision, nlp, triage, forecast, automation with ai]
+  mobile_app: [mobile app, ios, android, app store, flutter, react native, smartphone app, mobile application]
+  web_platform: [website, web app, web platform, portal, dashboard, frontend, web application, landing page]
+  cloud_migration: [cloud, aws, azure, gcp, migrate, migration, on-premise, on-prem, data center, kubernetes, devops, downtime]
+  iot: [iot, sensor, sensors, wearable, wearables, device, devices, bluetooth, telemetry, remote monitoring]
+  ar_vr: [ar, augmented reality, virtual try-on, try on, vr, virtual reality, 3d, metaverse]
+  blockchain: [blockchain, ledger, traceability, provenance, qr code, smart contract, web3]
+  seo_growth: [seo, organic traffic, from google, on google, google search, google maps, search results, show up on google, found online, search ranking, google ranking, local search, google business, keywords, store visits from search]
+  ux_modernization: [redesign, ux, ui, user experience, modernize, modernise, outdated interface, usability, design system, onboarding]
+  realtime_systems: [real-time, realtime, live updates, websocket, concurrency, high traffic, traffic spikes, scale, scalability, latency, crash, crashes]
+  payments: [payment, payments, cross-border, remittance, checkout, fraud, settlement, payment gateway]
+  ecommerce_platform: [headless, storefront, commerce platform, shopify, magento, cart, omnichannel, product catalog]
+  data_analytics: [analytics, reporting, dashboards, data pipeline, bi, insights, kpi, data warehouse, roi]
+
+regions:
+  india: [india, indian, bangalore, bengaluru, mumbai, delhi, jaipur, pune, hyderabad, chennai, noida, gurgaon, gurugram, kolkata, ahmedabad, inr, rupees, lakh, crore, ₹]
+  north_america: [usa, u.s., united states, us-based, canada, new york, california, texas, toronto, chicago, boston, seattle, san francisco]
+  europe: [uk, united kingdom, london, germany, berlin, france, paris, netherlands, amsterdam, spain, europe, eu, gdpr, ireland, dublin]
+  middle_east: [uae, dubai, abu dhabi, saudi, riyadh, qatar, doha, oman, bahrain, kuwait, middle east]
+  apac: [singapore, australia, sydney, melbourne, japan, tokyo, indonesia, jakarta, malaysia, vietnam, philippines, hong kong, new zealand]
+
+off_scope_signals: [wedding, photographer, photography, t-shirt, t-shirts, printing, pcb, circuit board, catering, accounting, bookkeeping, tax filing, gst filing, plumbing, interior design, furniture, call center agents, call centre agents, recruitment agency, manpower, tiles, construction labour, logo only, visiting cards]
+
+decision_maker_titles: [ceo, cto, cio, cfo, coo, founder, co-founder, cofounder, owner, managing director, director, vp, vice president, head of, president, partner, chief]
