@@ -1,0 +1,1882 @@
+{
+  "metrics": {
+    "mode": "offline",
+    "embedding": "tfidf (offline fallback)",
+    "extraction": {
+      "Industry": 0.88,
+      "Primary need type detected": 0.6363636363636364,
+      "Urgency": 0.96,
+      "Budget present": 0.9,
+      "Decision-maker present": 0.9666666666666667,
+      "Off-scope flag": 0.9666666666666667
+    },
+    "hit1": 0.875,
+    "hit3": 0.9583333333333334,
+    "mrr": 0.9166666666666666,
+    "ablation": {
+      "Dense only": 0.9583333333333334,
+      "BM25 only": 0.9166666666666666,
+      "Hybrid (RRF)": 0.9583333333333334,
+      "Hybrid + industry boost (default)": 1.0
+    },
+    "faithfulness": 1.0,
+    "guard_pass": 1.0,
+    "p50_ms": 15,
+    "p95_ms": 19,
+    "tokens": 0,
+    "cost_usd": 0.0,
+    "baseline": null
+  },
+  "rows": [
+    {
+      "id": "Q01",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q01",
+        "category": "clear",
+        "text": "Hi Cynbit team, I'm Ritika, co-founder of CareQ, a telehealth startup in Bangalore (12 people).\nPatients describe symptoms in our app and our two on-call doctors can't tell which ones are serious.\nWe want an AI layer that ranks incoming cases by urgency and pushes red-flag cases to the top.\nWe have about $35k and want a pilot within 6 weeks.",
+        "industry": "healthcare",
+        "urgency": "high",
+        "expected_cases": [
+          "CS-01"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": "CareQ",
+        "contact_name": null,
+        "contact_role": "Co-Founder",
+        "industry": null,
+        "need_types": [
+          "ai_ml"
+        ],
+        "need_summary": "We want an AI layer that ranks incoming cases by urgency and pushes red-flag cases to the top.",
+        "budget_signal": "$35k",
+        "budget_amount_usd": 35000.0,
+        "timeline": "6 weeks",
+        "timeline_months": 1.4,
+        "urgency": "high",
+        "company_size": "startup",
+        "decision_maker_present": true,
+        "region": "india",
+        "off_scope": false,
+        "missing_info": [
+          "industry / business context"
+        ]
+      },
+      "retrieved": [
+        "CS-01",
+        "CS-03",
+        "CS-09"
+      ],
+      "rank": 1,
+      "score": 77,
+      "tier": "hot",
+      "route": "AI & Data Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 78,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want an AI layer that ranks incoming cases by urgency and pushes red-flag cases to the top*.\n- Timeline mentioned: 6 weeks\n- Budget mentioned: $35k\n\n### Proposed Approach\nWe would design and validate an AI/ML component on your data, starting with a measurable pilot and human review.\n\n### Relevant Experience\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n\n### Timeline\nYou mentioned *6 weeks*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Industry / business context?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q02",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q02",
+        "category": "clear",
+        "text": "Hello, we are a rural health NGO in Rajasthan working with 2,000 diabetic and hypertensive patients.\nWe'd like patients to use low-cost BP and glucose devices at home, with readings sent to our doctors and alerts\nwhen something is wrong. Funding is approved from a CSR grant. Target: start rollout in 4-5 months.\nThanks, Anil Sharma, Programme Director",
+        "industry": "healthcare",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-02"
+        ],
+        "primary_need": "iot",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Director",
+        "industry": "healthcare",
+        "need_types": [
+          "iot"
+        ],
+        "need_summary": "we are a rural health NGO in Rajasthan working with 2,000 diabetic and hypertensive patients.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "4-5 months",
+        "timeline_months": 5.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-02",
+        "CS-12",
+        "CS-01"
+      ],
+      "rank": 1,
+      "score": 63,
+      "tier": "warm",
+      "route": "Healthcare & Life Sciences Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 17,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *we are a rural health NGO in Rajasthan working with 2,000 diabetic and hypertensive patients*.\n- Industry: healthcare\n- Timeline mentioned: 4-5 months\n\n### Proposed Approach\nWe would integrate devices and sensors through a secure ingestion pipeline with alerting.\n\n### Relevant Experience\n- **IoT Remote Patient Monitoring for Rural Health** (Pragya Healths) [CS-02]: Cynbit developed a mobile app that syncs vitals from wearable devices to a central clinician dashboard with automated alerts. Reported outcome: 40% reduction in emergency-room visits for enrolled patients; 99.9% performance; 24/7 reliability [CS-02].\n- **Migrating Critical Health Data to the Cloud with Zero Downtime** (CarePlus Health) [CS-12]: Cynbit implemented a phased migration strategy using AWS Snowball and real-time database replication, with a focus on zero-trust security architecture.\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n\n### Timeline\nYou mentioned *4-5 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q03",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q03",
+        "category": "clear",
+        "text": "We're a performance-marketing agency managing ad spend for 40 D2C brands across Google, Meta and YouTube.\nOur analysts spend 3 days every month building reports and we still move budgets on gut feel.\nLooking for an AI tool that recommends budget shifts between channels and automates reporting.\nBudget 20-30 lakh INR. - Karan, Head of Growth",
+        "industry": "marketing_adtech",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-03"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Head Of Growth",
+        "industry": "marketing_adtech",
+        "need_types": [
+          "ai_ml",
+          "data_analytics"
+        ],
+        "need_summary": "Looking for an AI tool that recommends budget shifts between channels and automates reporting.",
+        "budget_signal": "20-30 lakh INR",
+        "budget_amount_usd": 35714.29,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": "india",
+        "off_scope": false,
+        "missing_info": [
+          "target timeline",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-03",
+        "CS-01",
+        "CS-08"
+      ],
+      "rank": 1,
+      "score": 73,
+      "tier": "hot",
+      "route": "AI & Data Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 19,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Looking for an AI tool that recommends budget shifts between channels and automates reporting*.\n- Industry: marketing adtech\n- Budget mentioned: 20-30 lakh INR\n\n### Proposed Approach\nWe would design and validate an AI/ML component on your data, starting with a measurable pilot and human review; consolidate data into a reporting layer with automated dashboards.\n\n### Relevant Experience\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q04",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q04",
+        "category": "clear",
+        "text": "Our comedy festival's ticketing website went down for 40 minutes when the headliner sale opened last month.\nWe have another big on-sale in January and cannot let it crash again. Need someone to re-architect it for\ntraffic spikes urgently.\nRegards,\nNeha Kapoor\nFounder, LaughRiot Events",
+        "industry": "entertainment_events",
+        "urgency": "high",
+        "expected_cases": [
+          "CS-04"
+        ],
+        "primary_need": "realtime_systems",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": "LaughRiot Events",
+        "contact_name": "Neha Kapoor",
+        "contact_role": "Founder",
+        "industry": "entertainment_events",
+        "need_types": [
+          "web_platform",
+          "realtime_systems"
+        ],
+        "need_summary": "Need someone to re-architect it for traffic spikes urgently.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "in january",
+        "timeline_months": 2.0,
+        "urgency": "high",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-04",
+        "CS-11",
+        "CS-09"
+      ],
+      "rank": 1,
+      "score": 73,
+      "tier": "hot",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 17,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi Neha,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Need someone to re-architect it for traffic spikes urgently*.\n- Industry: entertainment events\n- Timeline mentioned: in january\n\n### Proposed Approach\nWe would deliver a responsive web platform with an admin dashboard; architect for real-time traffic and peak load, with load testing before launch.\n\n### Relevant Experience\n- **Scaling Real-Time Ticketing for Major Entertainment** (Evento) [CS-04]: Cynbit implemented a serverless architecture with elastic scaling and a prioritized queuing system using AWS Lambda and SQS. Reported outcome: 99.9% performance; 24/7 reliability [CS-04].\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n\n### Timeline\nYou mentioned *in january*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q05",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q05",
+        "category": "clear",
+        "text": "Hi, we sell prescription eyeglass frames online (D2C, ~60 employees). Customers hesitate because they can't\nsee how frames look on their face. We'd like a feature in our mobile app where they can try frames using the\nphone camera. Budget around $50k. Want it live before our spring collection in March.",
+        "industry": "fashion",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-05"
+        ],
+        "primary_need": "ar_vr",
+        "budget_present": true,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "ecommerce_retail",
+        "need_types": [
+          "mobile_app"
+        ],
+        "need_summary": "Want it live before our spring collection in March.",
+        "budget_signal": "$50k",
+        "budget_amount_usd": 50000.0,
+        "timeline": "in march",
+        "timeline_months": 4.0,
+        "urgency": "medium",
+        "company_size": "smb",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-05",
+        "CS-10",
+        "CS-11"
+      ],
+      "rank": 1,
+      "score": 80,
+      "tier": "hot",
+      "route": "Commerce & Retail Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 17,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Want it live before our spring collection in March*.\n- Industry: ecommerce retail\n- Timeline mentioned: in march\n- Budget mentioned: $50k\n\n### Proposed Approach\nWe would build cross-platform mobile apps with a shared backend and analytics from day one.\n\n### Relevant Experience\n- **AR Virtual Try-On: Redefining the Fashion Experience** (Urban Wardrobe) [CS-05]: Cynbit developed a mobile-optimized AR fitting room that utilizes camera data to provide accurate size recommendations and visual overlays.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n\n### Timeline\nYou mentioned *in march*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Contact's role / decision-maker?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q06",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q06",
+        "category": "clear",
+        "text": "We are an organic tea estate in Darjeeling selling in India and Europe. Buyers keep asking where exactly\ntheir tea comes from. We want a QR code on every pack that shows the garden, harvest date and processing steps,\nso customers can verify our claims. No fixed deadline yet.\nBest, Tenzing, Owner",
+        "industry": "food_supply_chain",
+        "urgency": "low",
+        "expected_cases": [
+          "CS-06"
+        ],
+        "primary_need": "blockchain",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Owner",
+        "industry": "food_supply_chain",
+        "need_types": [
+          "blockchain"
+        ],
+        "need_summary": "We want a QR code on every pack that shows the garden, harvest date and processing steps, so customers can verify our claims.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": "india",
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "target timeline",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-06",
+        "CS-11",
+        "CS-01"
+      ],
+      "rank": 1,
+      "score": 53,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 16,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want a QR code on every pack that shows the garden, harvest date and processing steps, so customers can verify our claims*.\n- Industry: food supply chain\n\n### Proposed Approach\nWe would implement a traceability layer that customers can verify via QR codes.\n\n### Relevant Experience\n- **Blockchain-Lite Transparency for Sustainable Food** (Wild basil) [CS-06]: Cynbit built a QR-based tracking system that allows customers to scan a meal and see the entire journey from farm to table.\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q07",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q07",
+        "category": "clear",
+        "text": "I'm the CIO of a 1,500-employee auto-parts manufacturer. Our ERP is 15 years old and the screens are so confusing\nthat training a new planner takes six weeks and mistakes are common. We don't want to replace the ERP, just\nmodernise the interface our people use. Budget has been allocated for FY27.",
+        "industry": "enterprise_software",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-07"
+        ],
+        "primary_need": "ux_modernization",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "CIO",
+        "industry": "enterprise_software",
+        "need_types": [
+          "ux_modernization"
+        ],
+        "need_summary": "We don't want to replace the ERP, just modernise the interface our people use.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "target timeline",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-07",
+        "CS-13",
+        "CS-01"
+      ],
+      "rank": 1,
+      "score": 53,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We don't want to replace the ERP, just modernise the interface our people use*.\n- Industry: enterprise software\n\n### Proposed Approach\nWe would modernise the user experience around a reusable design system.\n\n### Relevant Experience\n- **Modernizing Legacy ERP for the Digital Era** (Sofiasa) [CS-07]: Cynbit re-engineered the frontend using React and a custom design system focused on efficiency and cognitive-load reduction.\n- **Revolutionizing Cross-Border Payments for the Next Billion Users** (GlobalPay) [CS-13]: Cynbit built a microservices-based ledger system using Node.js and PostgreSQL, deployed on an auto-scaling Kubernetes cluster with real-time fraud detection. Reported outcome: 2.4M+ daily active users; Sub-200 ms latency; 100% compliance across 15 countries; 99.9% performance; 24/7 reliability [CS-13].\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q08",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q08",
+        "category": "clear",
+        "text": "We run an online test-prep platform for banking exams with 80k students. Everyone gets the same practice sets,\nso strong students get bored and weak ones drop out. We want the platform to adapt questions to each student's\nweak topics automatically. Can you share an approach? Timeline: 3 months.\nSanjay, CTO, ExamEdge",
+        "industry": "edtech",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-08"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "CTO",
+        "industry": "edtech",
+        "need_types": [],
+        "need_summary": "We want the platform to adapt questions to each student's weak topics automatically.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "3 months",
+        "timeline_months": 3.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-08",
+        "CS-10",
+        "CS-09"
+      ],
+      "rank": 1,
+      "score": 60,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want the platform to adapt questions to each student's weak topics automatically*.\n- Industry: edtech\n- Timeline mentioned: 3 months\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n\n### Timeline\nYou mentioned *3 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q09",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q09",
+        "category": "clear",
+        "text": "Hi! We're building a screenwriting SaaS where several writers edit the same script at once. Right now edits overwrite\neach other and the app lags when more than 5 people are in a document. We need a proper real-time collaboration\nengine. We're seed-funded and want to fix this in the next 2 months.",
+        "industry": "saas_collaboration",
+        "urgency": "high",
+        "expected_cases": [
+          "CS-09"
+        ],
+        "primary_need": "realtime_systems",
+        "budget_present": true,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "saas_collaboration",
+        "need_types": [
+          "realtime_systems"
+        ],
+        "need_summary": "We need a proper real-time collaboration engine.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "2 months",
+        "timeline_months": 2.0,
+        "urgency": "high",
+        "company_size": "startup",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-09",
+        "CS-03",
+        "CS-04"
+      ],
+      "rank": 1,
+      "score": 69,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We need a proper real-time collaboration engine*.\n- Industry: saas collaboration\n- Timeline mentioned: 2 months\n\n### Proposed Approach\nWe would architect for real-time traffic and peak load, with load testing before launch.\n\n### Relevant Experience\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n- **Scaling Real-Time Ticketing for Major Entertainment** (Evento) [CS-04]: Cynbit implemented a serverless architecture with elastic scaling and a prioritized queuing system using AWS Lambda and SQS. Reported outcome: 99.9% performance; 24/7 reliability [CS-04].\n\n### Timeline\nYou mentioned *2 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Contact's role / decision-maker?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q10",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q10",
+        "category": "clear",
+        "text": "We are a premium fashion label running on Magento. Pages are slow on mobile and we're launching in the UAE, UK and\nSingapore next year. We want to move to a headless commerce setup with a fast storefront. Budget USD 150k-200k.\nRegards,\nIsabelle Moreau\nVP Digital, Maison Clair",
+        "industry": "fashion",
+        "urgency": "low",
+        "expected_cases": [
+          "CS-10"
+        ],
+        "primary_need": "ecommerce_platform",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": "Maison Clair",
+        "contact_name": "Isabelle Moreau",
+        "contact_role": "VP",
+        "industry": "fashion",
+        "need_types": [
+          "ecommerce_platform"
+        ],
+        "need_summary": "We want to move to a headless commerce setup with a fast storefront.",
+        "budget_signal": "USD 150k-200k",
+        "budget_amount_usd": 200000.0,
+        "timeline": "next year",
+        "timeline_months": 12.0,
+        "urgency": "low",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": "europe",
+        "off_scope": false,
+        "missing_info": [
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-05",
+        "CS-10",
+        "CS-07"
+      ],
+      "rank": 2,
+      "score": 78,
+      "tier": "hot",
+      "route": "Commerce & Retail Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 14,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi Isabelle,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want to move to a headless commerce setup with a fast storefront*.\n- Industry: fashion\n- Timeline mentioned: next year\n- Budget mentioned: USD 150k-200k\n\n### Proposed Approach\nWe would move to a composable / headless commerce architecture.\n\n### Relevant Experience\n- **AR Virtual Try-On: Redefining the Fashion Experience** (Urban Wardrobe) [CS-05]: Cynbit developed a mobile-optimized AR fitting room that utilizes camera data to provide accurate size recommendations and visual overlays.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **Modernizing Legacy ERP for the Digital Era** (Sofiasa) [CS-07]: Cynbit re-engineered the frontend using React and a custom design system focused on efficiency and cognitive-load reduction.\n\n### Timeline\nYou mentioned *next year*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q11",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q11",
+        "category": "clear",
+        "text": "We own a chain of 25 consumer-electronics stores across Gujarat. People nearby can't find us on Google and our store\npages don't show up for searches like 'laptop shop near me'. We want more walk-ins from search. Budget is around 8 lakhs\nper year. -- Mehul, Marketing Manager",
+        "industry": "ecommerce_retail",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-11"
+        ],
+        "primary_need": "seo_growth",
+        "budget_present": true,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "ecommerce_retail",
+        "need_types": [
+          "seo_growth"
+        ],
+        "need_summary": "We want more walk-ins from search.",
+        "budget_signal": "Budget is around 8 lakhs",
+        "budget_amount_usd": 9523.81,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-11",
+        "CS-10",
+        "CS-03"
+      ],
+      "rank": 1,
+      "score": 65,
+      "tier": "warm",
+      "route": "Commerce & Retail Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 16,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want more walk-ins from search*.\n- Industry: ecommerce retail\n- Budget mentioned: Budget is around 8 lakhs\n\n### Proposed Approach\nWe would run a technical SEO and location-content programme with measurable KPIs.\n\n### Relevant Experience\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Target timeline?\n- Company size?\n- Contact's role / decision-maker?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q12",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q12",
+        "category": "clear",
+        "text": "Our diagnostics lab network (18 labs, Hyderabad) still runs patient reports from on-premise servers that are failing.\nWe need to move everything to AWS without any downtime, because doctors access reports 24/7, and we must stay\ncompliant with health-data rules. Please treat this as urgent.\nDr. Kavya Rao, Director - IT",
+        "industry": "healthcare",
+        "urgency": "high",
+        "expected_cases": [
+          "CS-12"
+        ],
+        "primary_need": "cloud_migration",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Director",
+        "industry": "healthcare",
+        "need_types": [
+          "cloud_migration"
+        ],
+        "need_summary": "We need to move everything to AWS without any downtime, because doctors access reports 24/7, and we must stay compliant with health-data rules.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "ASAP",
+        "timeline_months": 1.0,
+        "urgency": "high",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": "india",
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-12",
+        "CS-01",
+        "CS-02"
+      ],
+      "rank": 1,
+      "score": 73,
+      "tier": "hot",
+      "route": "Healthcare & Life Sciences Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We need to move everything to AWS without any downtime, because doctors access reports 24/7, and we must stay compliant with health-data rules*.\n- Industry: healthcare\n- Timeline mentioned: ASAP\n\n### Proposed Approach\nWe would plan a phased cloud migration with rollback points and security controls.\n\n### Relevant Experience\n- **Migrating Critical Health Data to the Cloud with Zero Downtime** (CarePlus Health) [CS-12]: Cynbit implemented a phased migration strategy using AWS Snowball and real-time database replication, with a focus on zero-trust security architecture.\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **IoT Remote Patient Monitoring for Rural Health** (Pragya Healths) [CS-02]: Cynbit developed a mobile app that syncs vitals from wearable devices to a central clinician dashboard with automated alerts. Reported outcome: 40% reduction in emergency-room visits for enrolled patients; 99.9% performance; 24/7 reliability [CS-02].\n\n### Timeline\nYou mentioned *ASAP*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q13",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q13",
+        "category": "clear",
+        "text": "We are a licensed remittance company in Dubai sending money from the Gulf to India, Nepal and the Philippines.\nOur transfer API is slow at peak hours and every new corridor means new compliance rules. We want to rebuild the\npayments backend to scale to millions of users. Budget: $250k. Timeline: phase 1 in 4 months.\nOmar Khalid, CTO, RemitWave",
+        "industry": "fintech",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-13"
+        ],
+        "primary_need": "payments",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "CTO",
+        "industry": "fintech",
+        "need_types": [
+          "realtime_systems",
+          "payments"
+        ],
+        "need_summary": "We want to rebuild the payments backend to scale to millions of users.",
+        "budget_signal": "$250k",
+        "budget_amount_usd": 250000.0,
+        "timeline": "4 months",
+        "timeline_months": 4.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": "india",
+        "off_scope": false,
+        "missing_info": [
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-13",
+        "CS-10",
+        "CS-09"
+      ],
+      "rank": 1,
+      "score": 83,
+      "tier": "hot",
+      "route": "Fintech & Payments Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want to rebuild the payments backend to scale to millions of users*.\n- Industry: fintech\n- Timeline mentioned: 4 months\n- Budget mentioned: $250k\n\n### Proposed Approach\nWe would architect for real-time traffic and peak load, with load testing before launch; build a compliant, low-latency payments flow with fraud monitoring.\n\n### Relevant Experience\n- **Revolutionizing Cross-Border Payments for the Next Billion Users** (GlobalPay) [CS-13]: Cynbit built a microservices-based ledger system using Node.js and PostgreSQL, deployed on an auto-scaling Kubernetes cluster with real-time fraud detection. Reported outcome: 2.4M+ daily active users; Sub-200 ms latency; 100% compliance across 15 countries; 99.9% performance; 24/7 reliability [CS-13].\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n\n### Timeline\nYou mentioned *4 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q14",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q14",
+        "category": "clear",
+        "text": "Our hospital's emergency department receives online pre-registration forms with symptoms before patients arrive.\nNurses read each form manually. We'd like AI to flag the critical ones and connect with our patient record\nsystem. Looking to start next quarter.\nRegards, Head of Nursing, Sunrise Multispeciality Hospital",
+        "industry": "healthcare",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-01"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Head Of Nursing",
+        "industry": "healthcare",
+        "need_types": [
+          "ai_ml"
+        ],
+        "need_summary": "Our hospital's emergency department receives online pre-registration forms with symptoms before patients arrive.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "next quarter",
+        "timeline_months": 4.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-02",
+        "CS-01",
+        "CS-12"
+      ],
+      "rank": 2,
+      "score": 63,
+      "tier": "warm",
+      "route": "Healthcare & Life Sciences Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Our hospital's emergency department receives online pre-registration forms with symptoms before patients arrive*.\n- Industry: healthcare\n- Timeline mentioned: next quarter\n\n### Proposed Approach\nWe would design and validate an AI/ML component on your data, starting with a measurable pilot and human review.\n\n### Relevant Experience\n- **IoT Remote Patient Monitoring for Rural Health** (Pragya Healths) [CS-02]: Cynbit developed a mobile app that syncs vitals from wearable devices to a central clinician dashboard with automated alerts. Reported outcome: 40% reduction in emergency-room visits for enrolled patients; 99.9% performance; 24/7 reliability [CS-02].\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **Migrating Critical Health Data to the Cloud with Zero Downtime** (CarePlus Health) [CS-12]: Cynbit implemented a phased migration strategy using AWS Snowball and real-time database replication, with a focus on zero-trust security architecture.\n\n### Timeline\nYou mentioned *next quarter*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q15",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q15",
+        "category": "clear",
+        "text": "We're a D2C skincare brand with a Shopify store. Paid ads are getting too expensive and we want organic traffic\nto grow: better rankings, blog content and local pages for the cities we deliver in. Can you send a proposal?\nOur budget is $3k per month.",
+        "industry": "ecommerce_retail",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-11"
+        ],
+        "primary_need": "seo_growth",
+        "budget_present": true,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "ecommerce_retail",
+        "need_types": [
+          "seo_growth",
+          "ecommerce_platform"
+        ],
+        "need_summary": "Paid ads are getting too expensive and we want organic traffic to grow: better rankings, blog content and local pages for the cities we deliver in.",
+        "budget_signal": "$3k",
+        "budget_amount_usd": 3000.0,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-11",
+        "CS-10",
+        "CS-08"
+      ],
+      "rank": 1,
+      "score": 65,
+      "tier": "warm",
+      "route": "Commerce & Retail Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Paid ads are getting too expensive and we want organic traffic to grow: better rankings, blog content and local pages for the cities we deliver in*.\n- Industry: ecommerce retail\n- Budget mentioned: $3k\n\n### Proposed Approach\nWe would run a technical SEO and location-content programme with measurable KPIs; move to a composable / headless commerce architecture.\n\n### Relevant Experience\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Target timeline?\n- Company size?\n- Contact's role / decision-maker?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q16",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q16",
+        "category": "clear",
+        "text": "We operate a digital lending app with 300k borrowers. Fraud rings are creating fake accounts and we only catch them\nafter the loan is disbursed. We need real-time fraud detection in the loan approval flow. Budget approved.\nNeed something in production by February.\nArjun Mehta, Chief Risk Officer, QuickCred",
+        "industry": "fintech",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-13"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Chief Risk Officer",
+        "industry": "fintech",
+        "need_types": [
+          "realtime_systems",
+          "payments"
+        ],
+        "need_summary": "We need real-time fraud detection in the loan approval flow.",
+        "budget_signal": "Budget approved",
+        "budget_amount_usd": null,
+        "timeline": "by february",
+        "timeline_months": 3.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-13",
+        "CS-09",
+        "CS-04"
+      ],
+      "rank": 1,
+      "score": 83,
+      "tier": "hot",
+      "route": "Fintech & Payments Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We need real-time fraud detection in the loan approval flow*.\n- Industry: fintech\n- Timeline mentioned: by february\n- Budget mentioned: Budget approved\n\n### Proposed Approach\nWe would architect for real-time traffic and peak load, with load testing before launch; build a compliant, low-latency payments flow with fraud monitoring.\n\n### Relevant Experience\n- **Revolutionizing Cross-Border Payments for the Next Billion Users** (GlobalPay) [CS-13]: Cynbit built a microservices-based ledger system using Node.js and PostgreSQL, deployed on an auto-scaling Kubernetes cluster with real-time fraud detection. Reported outcome: 2.4M+ daily active users; Sub-200 ms latency; 100% compliance across 15 countries; 99.9% performance; 24/7 reliability [CS-13].\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n- **Scaling Real-Time Ticketing for Major Entertainment** (Evento) [CS-04]: Cynbit implemented a serverless architecture with elastic scaling and a prioritized queuing system using AWS Lambda and SQS. Reported outcome: 99.9% performance; 24/7 reliability [CS-04].\n\n### Timeline\nYou mentioned *by february*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q17",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q17",
+        "category": "clear",
+        "text": "We run a corporate training platform used by 120 companies. Employees take the same courses regardless of their\nrole or skill level. We want to recommend learning paths based on each employee's skill gaps.\nBudget around EUR 60k. Timeline is flexible, ideally within 6 months.",
+        "industry": "edtech",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-08"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": true,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "edtech",
+        "need_types": [],
+        "need_summary": "We want to recommend learning paths based on each employee's skill gaps.",
+        "budget_signal": "EUR 60k",
+        "budget_amount_usd": 64800.0,
+        "timeline": "6 months",
+        "timeline_months": 6.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-08",
+        "CS-07",
+        "CS-09"
+      ],
+      "rank": 1,
+      "score": 62,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want to recommend learning paths based on each employee's skill gaps*.\n- Industry: edtech\n- Timeline mentioned: 6 months\n- Budget mentioned: EUR 60k\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n- **Modernizing Legacy ERP for the Digital Era** (Sofiasa) [CS-07]: Cynbit re-engineered the frontend using React and a custom design system focused on efficiency and cognitive-load reduction.\n- **Real-Time Collaborative Engine for Digital Storytellers** (Cloudy Tales) [CS-09]: Cynbit refactored the communication layer using optimized WebSockets and Conflict-free Replicated Data Types (CRDTs). Reported outcome: Supports 50,000+ active writers; 99.9% performance; 24/7 reliability [CS-09].\n\n### Timeline\nYou mentioned *6 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Company size?\n- Contact's role / decision-maker?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q18",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q18",
+        "category": "clear",
+        "text": "Our cricket league sells tickets online and every final the booking site freezes when 100k fans log in at once.\nWe need the booking system rebuilt to handle the rush before next season's final in April.\nRegards,\nVikram Singh\nCOO, Premier T20 League",
+        "industry": "entertainment_events",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-04"
+        ],
+        "primary_need": "realtime_systems",
+        "budget_present": false,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": "Premier T20 League",
+        "contact_name": "Vikram Singh",
+        "contact_role": "COO",
+        "industry": "entertainment_events",
+        "need_types": [],
+        "need_summary": "We need the booking system rebuilt to handle the rush before next season's final in April.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "in april",
+        "timeline_months": 5.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "budget range",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-04",
+        "CS-05",
+        "CS-10"
+      ],
+      "rank": 1,
+      "score": 50,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi Vikram,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We need the booking system rebuilt to handle the rush before next season's final in April*.\n- Industry: entertainment events\n- Timeline mentioned: in april\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **Scaling Real-Time Ticketing for Major Entertainment** (Evento) [CS-04]: Cynbit implemented a serverless architecture with elastic scaling and a prioritized queuing system using AWS Lambda and SQS. Reported outcome: 99.9% performance; 24/7 reliability [CS-04].\n- **AR Virtual Try-On: Redefining the Fashion Experience** (Urban Wardrobe) [CS-05]: Cynbit developed a mobile-optimized AR fitting room that utilizes camera data to provide accurate size recommendations and visual overlays.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n\n### Timeline\nYou mentioned *in april*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Budget range?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q19",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q19",
+        "category": "clear",
+        "text": "We're a consumer brand spending heavily across TV, digital ads and influencers, and nobody can tell us which channel\nactually drives sales. We'd like a single dashboard with attribution and AI recommendations for where to spend the\nnext rupee. Budget 50 lakhs. Want this before the festive season in 5 months.\nHead of Marketing, Brewly Coffee",
+        "industry": "marketing_adtech",
+        "urgency": "medium",
+        "expected_cases": [
+          "CS-03"
+        ],
+        "primary_need": "data_analytics",
+        "budget_present": true,
+        "decision_maker": true,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Head Of Marketing",
+        "industry": "marketing_adtech",
+        "need_types": [
+          "ai_ml",
+          "web_platform"
+        ],
+        "need_summary": "Want this before the festive season in 5 months.",
+        "budget_signal": "Budget 50 lakhs",
+        "budget_amount_usd": 59523.81,
+        "timeline": "5 months",
+        "timeline_months": 5.0,
+        "urgency": "medium",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-03",
+        "CS-06",
+        "CS-01"
+      ],
+      "rank": 1,
+      "score": 83,
+      "tier": "hot",
+      "route": "AI & Data Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 15,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Want this before the festive season in 5 months*.\n- Industry: marketing adtech\n- Timeline mentioned: 5 months\n- Budget mentioned: Budget 50 lakhs\n\n### Proposed Approach\nWe would design and validate an AI/ML component on your data, starting with a measurable pilot and human review; deliver a responsive web platform with an admin dashboard.\n\n### Relevant Experience\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n- **Blockchain-Lite Transparency for Sustainable Food** (Wild basil) [CS-06]: Cynbit built a QR-based tracking system that allows customers to scan a meal and see the entire journey from farm to table.\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n\n### Timeline\nYou mentioned *5 months*. We'll map Discovery, Design, Build and Launch phases against that date during discovery.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q20",
+      "category": "clear",
+      "mode": "offline",
+      "gold": {
+        "id": "Q20",
+        "category": "clear",
+        "text": "We sell ethnic wear online and 30% of our orders come back because of size issues. Could you build something that\nhelps shoppers see how a kurta or saree would look and fit on them before buying? We're a 40-person company in Jaipur.\nWant to launch by the wedding season.",
+        "industry": "fashion",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-05"
+        ],
+        "primary_need": "ar_vr",
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "Want to launch by the wedding season.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": "india",
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 0,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 2,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    },
+    {
+      "id": "Q21",
+      "category": "vague",
+      "mode": "offline",
+      "gold": {
+        "id": "Q21",
+        "category": "vague",
+        "text": "Hello, we are a small clinic and want to go digital. What can you do for us?",
+        "industry": "healthcare",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-01",
+          "CS-02",
+          "CS-12"
+        ],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "healthcare",
+        "need_types": [],
+        "need_summary": "we are a small clinic and want to go digital.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-12",
+        "CS-01",
+        "CS-02"
+      ],
+      "rank": 1,
+      "score": 32,
+      "tier": "cold",
+      "route": "Marketing Nurture",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 14,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *we are a small clinic and want to go digital*.\n- Industry: healthcare\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **Migrating Critical Health Data to the Cloud with Zero Downtime** (CarePlus Health) [CS-12]: Cynbit implemented a phased migration strategy using AWS Snowball and real-time database replication, with a focus on zero-trust security architecture.\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **IoT Remote Patient Monitoring for Rural Health** (Pragya Healths) [CS-02]: Cynbit developed a mobile app that syncs vitals from wearable devices to a central clinician dashboard with automated alerts. Reported outcome: 40% reduction in emergency-room visits for enrolled patients; 99.9% performance; 24/7 reliability [CS-02].\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q22",
+      "category": "vague",
+      "mode": "offline",
+      "gold": {
+        "id": "Q22",
+        "category": "vague",
+        "text": "Need an app for my business. Please call me back.",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [],
+        "primary_need": "mobile_app",
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "Need an app for my business.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-02",
+        "CS-08",
+        "CS-10"
+      ],
+      "rank": null,
+      "score": 12,
+      "tier": "cold",
+      "route": "Marketing Nurture",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 13,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Need an app for my business*.\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **IoT Remote Patient Monitoring for Rural Health** (Pragya Healths) [CS-02]: Cynbit developed a mobile app that syncs vitals from wearable devices to a central clinician dashboard with automated alerts. Reported outcome: 40% reduction in emergency-room visits for enrolled patients; 99.9% performance; 24/7 reliability [CS-02].\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Industry / business context?\n- Budget range?\n- Target timeline?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q23",
+      "category": "vague",
+      "mode": "offline",
+      "gold": {
+        "id": "Q23",
+        "category": "vague",
+        "text": "Our online store isn't doing well. Can you help us fix it?",
+        "industry": "ecommerce_retail",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-10",
+          "CS-11",
+          "CS-05"
+        ],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": "ecommerce_retail",
+        "need_types": [],
+        "need_summary": "Can you help us fix it?",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-11",
+        "CS-05",
+        "CS-10"
+      ],
+      "rank": 1,
+      "score": 32,
+      "tier": "cold",
+      "route": "Marketing Nurture",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 14,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Can you help us fix it?*.\n- Industry: ecommerce retail\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **Hyper-Local SEO Strategy Yields Record Organic Growth for Retail Chain** (TrendMart) [CS-11]: Cynbit developed a custom location-based landing-page engine and implemented an automated technical SEO audit system. Reported outcome: 140% increase in organic traffic; 60% increase in store visits from search; 99.9% performance; 24/7 reliability [CS-11].\n- **AR Virtual Try-On: Redefining the Fashion Experience** (Urban Wardrobe) [CS-05]: Cynbit developed a mobile-optimized AR fitting room that utilizes camera data to provide accurate size recommendations and visual overlays.\n- **Next-Gen Headless Commerce for Global Fashion** (EliteVogue) [CS-10]: Cynbit architected a headless commerce solution using Next.js for the frontend and a decoupled GraphQL API for backend services.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q24",
+      "category": "vague",
+      "mode": "offline",
+      "gold": {
+        "id": "Q24",
+        "category": "vague",
+        "text": "We want to use AI somehow in our company. Everyone is talking about it. Can we talk?",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-01",
+          "CS-03",
+          "CS-08"
+        ],
+        "primary_need": "ai_ml",
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [
+          "ai_ml"
+        ],
+        "need_summary": "We want to use AI somehow in our company.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [
+        "CS-01",
+        "CS-03",
+        "CS-08"
+      ],
+      "rank": 1,
+      "score": 25,
+      "tier": "cold",
+      "route": "Marketing Nurture",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 14,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *We want to use AI somehow in our company*.\n\n### Proposed Approach\nWe would design and validate an AI/ML component on your data, starting with a measurable pilot and human review.\n\n### Relevant Experience\n- **AI Diagnostic Triage: Enhancing Medical Efficiency** (WizHealth) [CS-01]: Cynbit built an AI model that categorizes symptoms based on severity and urgency, integrating directly with existing patient records. Reported outcome: Improved triage efficiency by 25%; 99.9% performance; 24/7 reliability [CS-01].\n- **AI-Powered Campaign Optimization for Global Marketing** (Marketing Addict) [CS-03]: Cynbit integrated an AI-driven analytics engine that unified data from Meta, Google, and TikTok, providing real-time spend recommendations. Reported outcome: 35% improvement in marketing ROI; 50% reduction in reporting time; 99.9% performance; 24/7 reliability [CS-03].\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Industry / business context?\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q25",
+      "category": "vague",
+      "mode": "offline",
+      "gold": {
+        "id": "Q25",
+        "category": "vague",
+        "text": "Looking for a technology partner for our school. Let me know your rates.",
+        "industry": "edtech",
+        "urgency": "unknown",
+        "expected_cases": [
+          "CS-08"
+        ],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": false
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": "Partner",
+        "industry": "edtech",
+        "need_types": [],
+        "need_summary": "Looking for a technology partner for our school.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": true,
+        "region": null,
+        "off_scope": false,
+        "missing_info": [
+          "specific requirement / scope",
+          "budget range",
+          "target timeline",
+          "company size"
+        ]
+      },
+      "retrieved": [
+        "CS-08",
+        "CS-05",
+        "CS-07"
+      ],
+      "rank": 1,
+      "score": 40,
+      "tier": "warm",
+      "route": "Platforms & Engineering Pod",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 14,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for reaching out to Cynbit Technologies.\n\n### Understanding\nFrom your message, you are looking for: *Looking for a technology partner for our school*.\n- Industry: edtech\n\n### Proposed Approach\nWe would start with a short discovery session to pin down scope before recommending a solution.\n\n### Relevant Experience\n- **AI-Driven Adaptive Learning Pathways for EdTech** (EContentPrep) [CS-08]: Cynbit created an adaptive engine that analyzes performance data to dynamically adjust lesson difficulty and format.\n- **AR Virtual Try-On: Redefining the Fashion Experience** (Urban Wardrobe) [CS-05]: Cynbit developed a mobile-optimized AR fitting room that utilizes camera data to provide accurate size recommendations and visual overlays.\n- **Modernizing Legacy ERP for the Digital Era** (Sofiasa) [CS-07]: Cynbit re-engineered the frontend using React and a custom design system focused on efficiency and cognitive-load reduction.\n\n### Timeline\nWe'll propose a phased plan (Discovery, Design, Build, Launch) after a discovery call.\n\n### Next Steps\nCould we schedule a short discovery call? It would help to know:\n- Specific requirement / scope?\n- Budget range?\n- Target timeline?\n- Company size?\n\nBest regards,\nCynbit Pre-Sales Team"
+    },
+    {
+      "id": "Q26",
+      "category": "off_scope",
+      "mode": "offline",
+      "gold": {
+        "id": "Q26",
+        "category": "off_scope",
+        "text": "Looking for a wedding photographer and videographer for a December wedding in Udaipur. Please share packages.",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": true
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "Looking for a wedding photographer and videographer for a December wedding in Udaipur.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 0,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    },
+    {
+      "id": "Q27",
+      "category": "off_scope",
+      "mode": "offline",
+      "gold": {
+        "id": "Q27",
+        "category": "off_scope",
+        "text": "We need 500 printed t-shirts with our logo for the company offsite next month. What's your price per piece?",
+        "industry": null,
+        "urgency": "high",
+        "expected_cases": [],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": true
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "We need 500 printed t-shirts with our logo for the company offsite next month.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": "next month",
+        "timeline_months": 1.0,
+        "urgency": "high",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 20,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    },
+    {
+      "id": "Q28",
+      "category": "off_scope",
+      "mode": "offline",
+      "gold": {
+        "id": "Q28",
+        "category": "off_scope",
+        "text": "Can you handle our monthly GST filing and bookkeeping? We are a small trading firm in Delhi.",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": true
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "Can you handle our monthly GST filing and bookkeeping?",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": "india",
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 0,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    },
+    {
+      "id": "Q29",
+      "category": "off_scope",
+      "mode": "offline",
+      "gold": {
+        "id": "Q29",
+        "category": "off_scope",
+        "text": "We need a manufacturer for 10,000 PCB circuit boards for our smart plug. Please quote.",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": true
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "We need a manufacturer for 10,000 PCB circuit boards for our smart plug.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": null,
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 0,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    },
+    {
+      "id": "Q30",
+      "category": "off_scope",
+      "mode": "offline",
+      "gold": {
+        "id": "Q30",
+        "category": "off_scope",
+        "text": "We want to hire 50 call center agents for our customer support team in Noida. Do you provide manpower?",
+        "industry": null,
+        "urgency": "unknown",
+        "expected_cases": [],
+        "primary_need": null,
+        "budget_present": false,
+        "decision_maker": false,
+        "off_scope": true
+      },
+      "pred": {
+        "company_name": null,
+        "contact_name": null,
+        "contact_role": null,
+        "industry": null,
+        "need_types": [],
+        "need_summary": "We want to hire 50 call center agents for our customer support team in Noida.",
+        "budget_signal": null,
+        "budget_amount_usd": null,
+        "timeline": null,
+        "timeline_months": null,
+        "urgency": "unknown",
+        "company_size": "unknown",
+        "decision_maker_present": false,
+        "region": "india",
+        "off_scope": true,
+        "missing_info": [
+          "specific requirement / scope",
+          "industry / business context",
+          "budget range",
+          "target timeline",
+          "company size",
+          "contact's role / decision-maker"
+        ]
+      },
+      "retrieved": [],
+      "rank": null,
+      "score": 0,
+      "tier": "cold",
+      "route": "Inbound Desk",
+      "faithfulness": 1.0,
+      "guard_passed": true,
+      "unverified": [],
+      "invalid_citations": [],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "tokens": 0,
+      "notices": [
+        "Embedding model could not be loaded; using TF-IDF vectors (lower recall on paraphrases)."
+      ],
+      "draft": "Hi,\n\nThank you for contacting Cynbit Technologies. We're a software and IT services company (web and mobile apps, AI/ML, cloud, SEO and digital platforms), so this request is outside what we deliver. If you also need a website, app or digital tools to support it, we'd be glad to help with that.\n\nBest regards,\nCynbit Team"
+    }
+  ],
+  "baseline": []
+}
