@@ -1,2 +1,9 @@
-.venv
-__pycache__
+# Python Virtual Environment
+.venv/
+venv/
+
+# Chroma local database directory
+.chroma/
+
+# macOS system junk
+.DS_Store
