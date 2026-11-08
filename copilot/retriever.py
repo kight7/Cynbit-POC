@@ -12,9 +12,10 @@ from __future__ import annotations
 import logging
 import re
 import sys
+import uuid
 from collections import defaultdict
 
-from .config import CHROMA_DIR, EMBED_MODEL, get_secret
+from .config import EMBED_MODEL, get_secret
 from .corpus import build_chunks, case_by_id
 from .schemas import Chunk, RetrievedCase
 
@@ -104,17 +105,12 @@ class HybridRetriever:
         texts = [c.text for c in self.chunks]
         embeddings = self.backend.embed_docs(texts)
 
-        # Chroma: persistent on disk when possible; rebuilt per backend so dimensions always match.
-        coll_name = "cynbit_cases_" + re.sub(r"[^a-z0-9]+", "_", self.backend.name.lower())[:40].strip("_")
-        try:
-            client = chromadb.PersistentClient(path=str(CHROMA_DIR)) if persist else chromadb.EphemeralClient()
-        except Exception:
-            client = chromadb.EphemeralClient()
-        try:
-            client.delete_collection(coll_name)
-        except Exception:
-            pass
-        self.collection = client.create_collection(coll_name, metadata={"hnsw:space": "cosine"})
+        # In-memory Chroma with a unique collection per instance. The index rebuilds in about a second,
+        # and this avoids stale collection handles when Streamlit restarts or reruns the app.
+        client = chromadb.EphemeralClient()
+        self.collection = client.create_collection(
+            f"cynbit_cases_{uuid.uuid4().hex[:10]}", metadata={"hnsw:space": "cosine"}
+        )
         self.collection.add(
             ids=[c.chunk_id for c in self.chunks],
             documents=texts,
