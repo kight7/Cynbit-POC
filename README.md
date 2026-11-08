@@ -7,7 +7,7 @@ AI/ML Engineer Intern assessment: *"Identify an AI opportunity for Cynbit"*, by 
 
 | Deliverable | Link |
 |---|---|
-| 🌐 **Live demo** (Streamlit) | **https://cynbit-presales-copilot.streamlit.app** |
+| 🌐 **Live demo** (Streamlit) | **https://cynbit-poc-hrn3b88ppzvanbtxmxdvaj.streamlit.app** |
 | 📄 AI Opportunity Report | [`docs/01_AI_Opportunity_Report.md`](docs/01_AI_Opportunity_Report.md) |
 | 🛠️ Technical Approach Report | [`docs/02_Technical_Approach_Report.md`](docs/02_Technical_Approach_Report.md) |
 | 📓 Colab backup | [`notebooks/Cynbit_PreSales_Copilot_Colab.ipynb`](notebooks/Cynbit_PreSales_Copilot_Colab.ipynb) · [Open in Colab](https://colab.research.google.com/github/kight7/Cynbit-POC/blob/main/notebooks/Cynbit_PreSales_Copilot_Colab.ipynb) |
